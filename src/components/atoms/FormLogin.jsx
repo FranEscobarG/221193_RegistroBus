@@ -12,29 +12,29 @@ function FormLogin() {
     
     const handlerClick = (e)=>{
         e.preventDefault();
-        // const loginForm = new FormData(form.current)
+        const loginForm = new FormData(form.current)
         
-        // const options = {
-        //     method: 'POST',
-        //     headers: {
-        //         'Content-Type': 'application/json'
-        //     },
-        //     body: JSON.stringify({
-        //         usuario: loginForm.get('usuario'),
-        //         contrasenia: loginForm.get('contrasenia')
-        //     })
-        // }
+        const options = {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({
+                usuario: loginForm.get('usuario'),
+                contrasenia: loginForm.get('contrasenia')
+            })
+        }
         
-        // fetch(endpoint, options) 
-        // .then(response => response.json())
-        // .then(data => {
-        //     if(data.status === false){
-        //         alert(JSON.stringify(data.message));
-        //     }
-        //     else{
-        //         navigate("/registerbus");
-        //     } 
-        // });
+        fetch(endpoint, options) 
+        .then(response => response.json())
+        .then(data => {
+            if(data.status === false){
+                alert(JSON.stringify(data.message));
+            }
+            else{
+                navigate("/registerbus");
+            }
+        });
     }
 
     return ( 
