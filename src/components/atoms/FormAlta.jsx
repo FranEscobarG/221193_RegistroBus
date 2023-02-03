@@ -10,30 +10,30 @@ function FormAlta() {
 
     const handlerClick = (e)=>{
         e.preventDefault();
-        // const busForm = new FormData(form.current)
+        const busForm = new FormData(form.current)
         
-        // const options = {
-        //     method: 'POST',
-        //     headers: {
-        //         'Content-Type': 'application/json'
-        //     },
-        //     body: JSON.stringify({
-        //         clave: busForm.get('clave'),
-        //         placa: busForm.get('placa'),
-        //         numasientos: busForm.get('numasientos'),
-        //         fecha: busForm.get('fecha'),
-        //         tipo: busForm.get('tipo'),
-        //         nombre: busForm.get('nombre'),
-        //         licencia: busForm.get('licencia')
-        //     })
-        // }
+        const options = {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({
+                clave: busForm.get('clave'),
+                placa: busForm.get('placa'),
+                numasientos: busForm.get('numasientos'),
+                fecha: busForm.get('fecha'),
+                tipo: busForm.get('tipo'),
+                nombre: busForm.get('nombre'),
+                licencia: busForm.get('licencia')
+            })
+        }
         
-        // fetch(endpoint, options) 
-        // .then(response => response.json())
-        // .then(data => {
-        //     alert(JSON.stringify(data.message));
-        //     // navigate("/");
-        // });
+        fetch(endpoint, options) 
+        .then(response => response.json())
+        .then(data => {
+            alert(JSON.stringify(data.message));
+            // navigate("/");
+        });
     }
 
 
