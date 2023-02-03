@@ -72,3 +72,17 @@ input, .input_smallbox select{
     background: white;
     cursor: pointer;
 }
+
+/* .box-form_alta .button_mostrar{
+    width: 100%;
+    padding: 8px 20px;
+    margin-top: 15px;
+    border: none;
+    border-radius: 4px;
+    outline: none;
+    font-size: 1.15rem;
+    font-weight: 600;
+    color: white;
+    background: rgb(69, 131, 255);
+    cursor: pointer;
+} */

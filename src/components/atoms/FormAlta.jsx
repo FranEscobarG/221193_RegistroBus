@@ -1,4 +1,5 @@
 import { useRef } from 'react';
+import { useState } from "react";
 // import {useNavigate} from 'react-router-dom';
 import Logo from "../../assets/img/LogoBus.jpg";
 import '../../assets/styles/FormAlta.css'
@@ -7,6 +8,8 @@ function FormAlta() {
     // const navigate = useNavigate();
     const form = useRef()
     const endpoint = 'http://34.225.239.102/api/autobus/register';
+
+    let licencia = String(Math.floor(Math.random() * (100000 - 10000) + 100));    
 
     const handlerClick = (e)=>{
         e.preventDefault();
@@ -76,11 +79,11 @@ function FormAlta() {
                     </div>
                     <div className="inputbox">
                         <label htmlFor="">No. de licencia</label>
-                        <input type="text" required  name="licencia"/>
+                        <input type="text" required  name="licencia" value={licencia}/>
                         <i></i>
                     </div>
                     <input type='button' value='Registrar Autobus' onClick={handlerClick} className="button_alta" />
-                    
+                    {/* <input type='button' value='Mostrar Autobuses' onClick={handlerClickMostrar} className="button_mostrar" />  */}
                 </form>
         </div> 
      );
